@@ -1,21 +1,21 @@
-'use client'
+"use client"
 
-import {useState} from 'react';
+import {useState} from "react";
 
 export default function Counter() {
 
     const [count, setCount] = useState<number>(0);
 
     function increase(): void {
-        setCount(count + 1)
+        setCount(count + 1);
     }
 
     function decrease(): void {
-        setCount(count - 1)
+        setCount(count - 1);
     }
 
     function reset(): void {
-        setCount(0)
+        setCount(0);
     }
 
     return(
@@ -27,5 +27,5 @@ export default function Counter() {
             <button onClick={increase} className="transition-all duration-150 hover:bg-blue-400 cursor-pointer h-12 w-12 mx-2 p-2 rounded-xl shadow-lg bg-blue-500 text-white text-xl font-bold">+</button>
             <button onClick={decrease} className="transition-all duration-150 hover:bg-blue-400 cursor-pointer h-12 w-12 ml-2 p-2 rounded-xl shadow-lg bg-blue-500 text-white text-xl font-bold">−</button>
         </div>
-    )
+    );
 }
