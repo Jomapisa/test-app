@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {ThemeProvider} from "@/context/ThemeContext";
+import Navbar from "@/components/Navbar";
 
 
 export const metadata: Metadata = {
@@ -12,10 +14,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en">
-      <body className="h-screen w-screen flex justify-center p-36">
-        {children}
+      <body>
+        <ThemeProvider>
+          <Navbar/>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
