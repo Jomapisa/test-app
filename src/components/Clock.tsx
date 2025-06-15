@@ -22,6 +22,6 @@ export default function Clock() {
     const textColor = theme.theme === "dark" ? "text-white" : "";
 
     return(
-        <div className={`${textColor}`}>{time}</div>
+        <span className={`${textColor}`}>{time}</span>
     );
 }

@@ -26,7 +26,7 @@ export default function Counter() {
     const countBgColor = theme.theme === "dark" ? "bg-lime-600": "bg-gray-300";
 
     return(
-        <div className={`rounded-2xl shadow-2xl py-4 px-6 ${bgColor}`}>
+        <div className={`rounded-2xl shadow-2xl h-1/3 py-4 px-6 ${bgColor}`}>
             <h2 className={`text-center text-2xl ${textColor}`}>Counter</h2>
             <div className="h-0.5 w-full bg-gradient-to-r from-blue-300/0 via-blue-500 to-blue-300/0 my-2"></div>
             <div className={`w-full rounded-lg my-4 h-12 flex items-center justify-end p-2 text-2xl ${countBgColor}`}>
