@@ -1,6 +1,7 @@
 "use client"
 
 import {useState, useEffect} from "react";
+import {useTheme} from "@/context/ThemeContext";
 
 export default function Clock() {
 
@@ -16,7 +17,11 @@ export default function Clock() {
         }
     }, []);
 
+    const theme = useTheme();
+
+    const textColor = theme.theme === "dark" ? "text-white" : "";
+
     return(
-        <div>{time}</div>
+        <div className={`${textColor}`}>{time}</div>
     );
 }
