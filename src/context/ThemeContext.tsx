@@ -24,7 +24,7 @@ export function ThemeProvider({ children }: {children: ReactNode}) {
         if (typeof window !== "undefined") {
             return (localStorage.getItem("theme") || "dark") as Theme; // will be ugly, as the theme stored might be different than the default one. The user's theme choice should be stored in the server if we are going to use SSR...
         }
-        return "dark"
+        return "dark";
     });
 
     const toggleTheme = () => {
