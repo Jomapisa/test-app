@@ -17,8 +17,6 @@ export default function Clock(props: CountdownPropsType) {
 
     useEffect(() => {
         const intervalId = setInterval(()=>{
-            console.log('huh')
-            console.log(timer)
             setTimer((prevTimer) => {
                 const newTimer = prevTimer - 1;
                 if (newTimer <= 0) {
