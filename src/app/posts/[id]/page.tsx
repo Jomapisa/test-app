@@ -33,8 +33,6 @@ export default async function Post({ params }: { params: PostParams }){
     }
 
     return(
-        <div className="min-h-[85vh] w-full px-36 py-18">
-            <PostBody post={post}></PostBody>
-        </div>
+        <PostBody post={post}></PostBody>
     )
 }
